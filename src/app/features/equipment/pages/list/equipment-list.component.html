@@ -1,0 +1,39 @@
+<div *ngIf="equipments.length > 0; else noEquipments">
+  <h2>List of Equipments</h2>
+  <button type="submit" class="btn btn-secondary" (click)="navigateToAddEquipment()">
+    Add Equipment
+  </button>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Model</th>
+      <th>Description</th>
+      <th>Status</th>
+      <td>Action</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let equipment of equipments">
+      <td>{{ equipment.id  }}</td>
+      <td>{{ equipment.name }}</td>
+      <td>{{ equipment.equipmentType }}</td>
+      <td>{{ equipment.model }}</td>
+      <td>{{ equipment.description }}</td>
+      <td>{{ equipment.equipmentStatus }}</td>
+      <td>
+        <button  (click)="deleteEquipment(equipment.id)" class="btn btn-outline-danger">
+          <i class="bi bi-trash"></i>
+        </button>
+      </td>
+
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<ng-template #noEquipments>
+  <p>No Equipments available.</p>
+</ng-template>

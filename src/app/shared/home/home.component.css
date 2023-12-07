@@ -1,0 +1,41 @@
+/* home.component.css */
+
+.jumbotron {
+  background-color: #f8f9fa;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-title {
+  font-size: 1.25rem;
+}
+
+.card-text {
+  color: #6c757d;
+}
+
+
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 700; /* Gras */
+}
+
+.card-text {
+  color: #495057;
+}

@@ -1,0 +1,26 @@
+<div *ngIf="agencies.length > 0; else noAgencies">
+  <h2>List of Agencies</h2>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Local</th>
+      <th>Status</th>
+      <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let agency of agencies">
+      <td>{{ agency.id }}</td>
+      <td>{{ agency.local }}</td>
+      <td>{{ agency.is_enabled ? 'Enabled' : 'Disabled' }}</td>
+
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<ng-template #noAgencies>
+
+  <p>No agencies available.</p>
+</ng-template>

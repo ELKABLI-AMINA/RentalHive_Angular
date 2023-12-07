@@ -1,0 +1,33 @@
+<div class="p-3">
+  <div class="card">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-6">
+          <form [formGroup]="equipmentForm" (ngSubmit)="saveEquipment()">
+            <div class="mb-3">
+              <label class="form-label">Name</label>
+              <input class="form-control" formControlName="name">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Model</label>
+              <input class="form-control" formControlName="model">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">EquipmentType</label>
+              <input class="form-control" formControlName="equipmentType">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Description</label>
+              <input class="form-control" formControlName="description">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">EquipmentStatus</label>
+              <input class="form-control" formControlName="equipmentStatus">
+            </div>
+            <button type="submit" [disabled]="equipmentForm.invalid" class="btn btn-success">Enregistrer</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
